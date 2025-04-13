@@ -1,10 +1,13 @@
 import { Search } from 'lucide-react';
 import { useAuthStore } from '../store/useAuthStore';
 import {Link} from "react-router-dom"
+import { useState } from 'react';
+
 
 export default function Navbar() {
 
   const { logout, authUser } = useAuthStore();
+  const [selectedImg, setSelectedImg] = useState(null);
 
 
   return (
@@ -19,18 +22,17 @@ export default function Navbar() {
       </div>
 
       {/* Middle: Nav Links */}
-      <div className="flex items-center space-x-4">
-        <button className="px-3 py-1 rounded-full bg-gray-300 text-black font-semibold">Home</button>
+      <div className="flex items-center space-x-6 bg-slate-300 px-7 py-2 rounded-full">
+      <button className="text-gray-700 hover:text-black active:font-bold active:underline cursonr-pointer"><Link to="/">Home</Link></button>
         <div className="relative">
-          <button className="text-gray-700 hover:text-black">Note Gallery</button>
+          <button className="text-gray-700 hover:text-black"><Link to="/notes">Note Gallery</Link></button>
           <span className="absolute -top-2 -right-4 text-xs text-white bg-orange-500 px-1 rounded-full">New</span>
         </div>
-        <button className="text-gray-700 hover:text-black">College</button>
-        <button className="text-gray-700 hover:text-black">Reels</button>
-        <button className="text-gray-700 hover:text-black">Feedback</button>
-        <button className="text-gray-700 hover:text-black">Contact</button>
+        <button className="text-gray-700 hover:text-black"><Link to='/about'>About</Link></button>
+        {/* <button className="text-gray-700 hover:text-black">Reels</button> */}
+        {/* <button className="text-gray-700 hover:text-black">Feedback</button> */}
+        <button className="text-gray-700 hover:text-black"><Link to="/contact">Contact</Link></button>
       </div>
-
       {/* Right: Search and Profile Icon */}
       <div className="flex items-center space-x-3">
         <div className="relative">
@@ -47,8 +49,8 @@ export default function Navbar() {
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img
-            alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            src={selectedImg || authUser.profilePic || "/avatar.png"}
+            alt="Profile" />
         </div>
       </div>
       <ul

@@ -8,7 +8,7 @@ export default function DetailPage() {
           <img
             src="logoN.png"
             alt="Education Logo"
-            className="w-30 h-30 mb-6"
+            className="w-50 h-50 mb-6"
           />
         </div>
  </div> <p className="text-center max-w-sm text-white"> Stay ahead in your academic journey with a seamless resource-sharing platform, simplifying access to notes, question papers, and projects while keeping you connected with the latest study materials. </p> </div>

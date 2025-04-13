@@ -37,7 +37,7 @@ export default function LoginPage() {
           <img
             src="logoN.png"
             alt="Education Logo"
-            className="w-30 h-30 mb-6"
+            className="w-50 h-50 mb-6"
           />
         </div>
         <p className="text-center max-w-sm">
