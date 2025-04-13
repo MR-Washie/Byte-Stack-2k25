@@ -14,12 +14,14 @@ study guides
 ● Search materials by college, subject, or exam
 
 
+ Technology stack
 ● Frontend: React + Tailwind CSS
  ● Backend: Node.js + Express
  ● Database: MongoDB
  ● Real-time Chat: Socket.io
  ● Storage: Cloudinary / Firebase Storage
  ● UI/UX: UI/UX from Figma
+ 
 
  Dependencies/ Show Stopper here:
  ● React + Vite + Tailwind for ultra-fast, scalable, and 
